@@ -1,29 +1,21 @@
 # PizzeriaPOS
 
-PizzeriaPOS es un sistema de punto de venta para una pizzería, construido con .NET 8. Combina una API segura con JWT, una capa de datos basada en Entity Framework Core y una aplicación de escritorio WinForms para administrar productos, clientes, direcciones y pedidos.
+Sistema de punto de venta para una pizzería, construido con .NET 8. Combina una API segura con JWT, una capa de datos basada en Entity Framework Core y una aplicación de escritorio WinForms.
 
-## Lo que hace
+---
 
-- Autenticación de usuarios con registro e inicio de sesión.
-- Gestión de productos con baja lógica.
-- Gestión de clientes y sus direcciones.
-- Creación y consulta de pedidos con detalles.
-- Interfaz de escritorio para operar el sistema de forma visual.
-- Pruebas automatizadas para repositorios con EF Core InMemory.
+## Requisitos
 
-## Arquitectura
+- Visual Studio 2022 o superior
+- .NET 8 SDK
+- SQL Server local
 
-La solución está organizada en cuatro proyectos:
-
-- `PizzeriaPOS.API`: backend ASP.NET Core con endpoints y seguridad JWT.
-- `PizzeriaPOS.Data`: entidades, `DbContext` y repositorios.
-- `PizzeriaPOS.WinForms`: cliente de escritorio conectado a la API.
-- `PizzeriaPOS.Tests`: pruebas unitarias de la capa de datos.
+---
 
 ## Tecnologías
 
 - .NET 8
-- ASP.NET Core Minimal APIs
+- ASP.NET Core
 - Entity Framework Core
 - SQL Server
 - WinForms
@@ -32,102 +24,90 @@ La solución está organizada en cuatro proyectos:
 - Swagger / Swashbuckle
 - xUnit
 
-## Estructura principal
+---
+
+## Arquitectura
+
+La solución está organizada en cuatro proyectos:
+
+| Proyecto | Descripción |
+|---|---|
+| `PizzeriaPOS.Data` | Entidades, `DbContext` y repositorios |
+| `PizzeriaPOS.API` | Backend ASP.NET Core con endpoints y seguridad JWT |
+| `PizzeriaPOS.WinForms` | Cliente de escritorio conectado a la API |
+| `PizzeriaPOS.Tests` | Pruebas unitarias de la capa de datos con EF Core InMemory |
 
 ```text
 PizzeriaPOS/
 ├─ Database/
 │  └─ Scripts/
-├─ PizzeriaPOS.API/
 ├─ PizzeriaPOS.Data/
-├─ PizzeriaPOS.Tests/
-└─ PizzeriaPOS.WinForms/
+├─ PizzeriaPOS.API/
+├─ PizzeriaPOS.WinForms/
+└─ PizzeriaPOS.Tests/
 ```
 
-## Módulos principales
+---
 
-### API
+## Configuración y ejecución
 
-La API expone endpoints para:
+### 1. Abrir la solución
 
-- Autenticación: `register` y `login`
-- Productos: CRUD y consulta de categorías
-- Clientes: CRUD
-- Direcciones: CRUD por cliente
-- Pedidos: CRUD, manejo de detalles y estado
+Abre `PizzeriaPOS.slnx` en Visual Studio 2022 o superior.
 
-### Datos
+### 2. Configurar la base de datos
 
-La capa de datos incluye estas entidades:
+Ejecuta los scripts SQL ubicados en `Database/Scripts` en este orden:
 
-- `Producto`
-- `Cliente`
-- `Direccion`
-- `Pedido`
-- `PedidoDetalle`
-- `Usuario`
+1. `01_create_and_seed_productos.sql`
+2. `02_create_tables_complete.sql`
+3. `03_create_usuarios_table.sql`
+4. `04_seed_usuario_admin.sql`
 
-También incluye repositorios para abstraer el acceso a SQL Server.
+### 3. Revisar la conexión
 
-### WinForms
+Verifica la cadena de conexión en `PizzeriaPOS.API/appsettings.json` y ajusta el nombre del servidor si es necesario.
 
-La aplicación de escritorio permite:
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=TU_SERVIDOR;Database=PizzeriaPOS;Trusted_Connection=True;TrustServerCertificate=True;"
+}
+```
 
-- Iniciar sesión y registrarse
-- Administrar productos
-- Administrar clientes y direcciones
-- Crear pedidos con sus detalles
-- Consultar la información desde una interfaz visual
+### 4. Ejecutar la API
 
-### Pruebas
+Inicia el proyecto `PizzeriaPOS.API`. La API quedará disponible en:
 
-El proyecto de pruebas valida el comportamiento de:
+- `https://localhost:7057`
+- `http://localhost:5161`
 
-- Productos
-- Clientes
-- Pedidos
+La documentación Swagger estará en `https://localhost:7057/swagger`.
 
-usando base de datos en memoria.
+### 5. Ejecutar la aplicación de escritorio
 
-## Base de datos
+Inicia el proyecto `PizzeriaPOS.WinForms` y usa tu usuario registrado para acceder. Si no tienes usuario, regístrate desde la pantalla de login.
 
-Los scripts SQL están en `Database/Scripts` y permiten crear la base, tablas y datos iniciales.
-
-## Requisitos
-
-- Visual Studio 2022 o superior
-- .NET 8 SDK
-- SQL Server local
-
-## Configuración
-
-La cadena de conexión se encuentra en:
-
-`PizzeriaPOS.API/appsettings.json`
-
-## Ejecución
-
-1. Ejecuta los scripts SQL en `Database/Scripts`.
-2. Configura la cadena de conexión si tu SQL Server usa otra instancia.
-3. Inicia `PizzeriaPOS.API`.
-4. Inicia `PizzeriaPOS.WinForms`.
-5. Regístrate o inicia sesión desde la app de escritorio.
+---
 
 ## Pruebas
-
-Para correr las pruebas:
 
 ```bash
 dotnet test
 ```
 
+El proyecto de pruebas valida el comportamiento de los repositorios de `Producto`, `Cliente` y `Pedido` usando base de datos en memoria.
+
+---
+
 ## Notas
 
-- La API usa JWT para proteger la mayoría de operaciones.
+- La API usa JWT para proteger todos los endpoints excepto `register` y `login`.
 - Los productos usan baja lógica mediante `EstaActivo`.
-- Los pedidos recalculan su total cuando cambian sus detalles.
-- La UI de WinForms consume la API directamente.
+- Los pedidos recalculan su total automáticamente cuando cambian sus detalles.
+- La UI de WinForms consume la API directamente via `HttpClient`.
+
+---
 
 ## Autor
 
-Proyecto de laboratorio desarrollado para evaluación técnica.
+Proyecto de laboratorio desarrollado para evaluación técnica — Albatros.
