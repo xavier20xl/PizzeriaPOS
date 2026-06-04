@@ -126,8 +126,8 @@ BEGIN
     INSERT INTO [dbo].[Productos] ([Nombre], [Descripcion], [Precio], [Categoria])
     VALUES 
         ('Pizza Pepperoni', 'Pizza mediana con pepperoni y queso mozzarella.', 249.00, 'Pizza'),
-        ('Pizza Hawaiana', 'Pizza mediana con jamón, piña y queso mozzarella.', 239.00, 'Pizza'),
-        ('Refresco 2L', 'Bebida gaseosa de dos litros.', 55.00, 'Bebida');
+        ('Pizza Hawaiana', 'Pizza mediana con jamon, pina y queso mozzarella.', 239.00, 'Pizza'),
+        ('Refresco 2L Coca-Cola', 'Refresco Coca-Cola de dos litros.', 65.00, 'Bebida');
 END
 GO
 
@@ -135,9 +135,9 @@ IF NOT EXISTS (SELECT TOP 1 1 FROM [dbo].[Clientes])
 BEGIN
     INSERT INTO [dbo].[Clientes] ([Nombre], [Telefono], [Email])
     VALUES 
-        ('Juan Pérez', '555-1001', 'juan.perez@email.com'),
-        ('María García', '555-1002', 'maria.garcia@email.com'),
-        ('Carlos López', '555-1003', 'carlos.lopez@email.com');
+        ('Juan Perez', '555-1001', 'juan.perez@correo.hn'),
+        ('Maria Garcia', '555-1002', 'maria.garcia@correo.hn'),
+        ('Carlos Lopez', '555-1003', 'carlos.lopez@correo.hn');
 END
 GO
 
@@ -145,9 +145,9 @@ IF NOT EXISTS (SELECT TOP 1 1 FROM [dbo].[Direcciones])
 BEGIN
     INSERT INTO [dbo].[Direcciones] ([Calle], [Numero], [Colonia], [Ciudad], [CodigoPostal], [Referencia], [EsPrincipal], [ClienteId])
     VALUES 
-        ('Av. Reforma', '123', 'Centro', 'Ciudad de México', '06000', 'Frente al parque', 1, 1),
-        ('Calle Juárez', '456', 'Roma Norte', 'Ciudad de México', '06700', 'Edificio azul', 0, 1),
-        ('Blvd. Insurgentes', '789', 'Condesa', 'Ciudad de México', '06140', 'Cerca del metro', 1, 2);
+        ('Avenida Juan Pablo II', '123', 'Centro', 'Tegucigalpa', '11101', 'Frente al parque central', 1, 1),
+        ('Boulevard Suyapa', '456', 'Lomas del Guijarro', 'Tegucigalpa', '11102', 'Casa color crema', 0, 1),
+        ('Colonia Kennedy', '789', 'Kennedy', 'Tegucigalpa', '11103', 'Cerca de la escuela', 1, 2);
 END
 GO
 

@@ -49,24 +49,36 @@ PizzeriaPOS/
 
 ---
 
-## Configuración y ejecución
+## Cómo ejecutar
 
 ### 1. Abrir la solución
 
 Abre `PizzeriaPOS.slnx` en Visual Studio 2022 o superior.
 
-### 2. Configurar la base de datos
+### 2. Proyectos de inicio
 
-Ejecuta los scripts SQL ubicados en `Database/Scripts` en este orden:
+La solución está configurada para ejecutar al mismo tiempo:
+
+- `PizzeriaPOS.API`
+- `PizzeriaPOS.WinForms`
+
+Los siguientes proyectos no se ejecutan directamente:
+
+- `PizzeriaPOS.Data`
+- `PizzeriaPOS.Tests`
+
+### 3. Configurar la base de datos
+
+Ejecuta los scripts de `Database/Scripts` en este orden:
 
 1. `01_create_and_seed_productos.sql`
 2. `02_create_tables_complete.sql`
 3. `03_create_usuarios_table.sql`
 4. `04_seed_usuario_admin.sql`
 
-### 3. Revisar la conexión
+### 4. Revisar la cadena de conexión
 
-Verifica la cadena de conexión en `PizzeriaPOS.API/appsettings.json` y ajusta el nombre del servidor si es necesario.
+Verifica la configuración en `PizzeriaPOS.API/appsettings.json` y ajusta el nombre del servidor si es necesario.
 
 ```json
 "ConnectionStrings": {
@@ -74,18 +86,20 @@ Verifica la cadena de conexión en `PizzeriaPOS.API/appsettings.json` y ajusta e
 }
 ```
 
-### 4. Ejecutar la API
+### 5. Ejecutar la solución
 
-Inicia el proyecto `PizzeriaPOS.API`. La API quedará disponible en:
+Inicia la solución desde Visual Studio y espera a que arranquen la API y la aplicación de escritorio.
+
+La API quedará disponible en:
 
 - `https://localhost:7057`
 - `http://localhost:5161`
 
 La documentación Swagger estará en `https://localhost:7057/swagger`.
 
-### 5. Ejecutar la aplicación de escritorio
+### 6. Iniciar sesión
 
-Inicia el proyecto `PizzeriaPOS.WinForms` y usa tu usuario registrado para acceder. Si no tienes usuario, regístrate desde la pantalla de login.
+Abre la app WinForms y accede con un usuario registrado. Si no existe uno, usa la pantalla de registro.
 
 ---
 

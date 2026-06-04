@@ -7,6 +7,9 @@ namespace PizzeriaPOS.WinForms.Forms
     {
         private readonly ApiClient _apiClient;
         private int? _productoSeleccionadoId;
+        private List<ProductoModel> _productosCache = new();
+        private bool _cargandoDatos;
+        private bool _evitarSeleccion;
 
         public ProductosControl(ApiClient apiClient)
         {
@@ -41,36 +44,90 @@ namespace PizzeriaPOS.WinForms.Forms
         {
             try
             {
-                var productos = await _apiClient.GetAsync<List<ProductoModel>>("/api/productos");
-                if (productos != null && productos.Count > 0)
-                {
-                    dgvProductos.DataSource = null;
-                    dgvProductos.DataSource = productos;
+                _cargandoDatos = true;
+                _evitarSeleccion = true;
 
-                    if (dgvProductos.Columns["Id"] != null) dgvProductos.Columns["Id"].Visible = false;
-                    if (dgvProductos.Columns["EstaActivo"] != null) dgvProductos.Columns["EstaActivo"].Visible = false;
-                    if (dgvProductos.Columns["FechaCreacion"] != null) dgvProductos.Columns["FechaCreacion"].Visible = false;
-                    if (dgvProductos.Columns["Precio"] != null) dgvProductos.Columns["Precio"].DefaultCellStyle.Format = "C2";
-                    if (dgvProductos.Columns["Categoria"] != null) dgvProductos.Columns["Categoria"].HeaderText = "Categoría";
-
-                    lblStatus.Text = $"Productos: {productos.Count}";
-                }
-                else
-                {
-                    lblStatus.Text = "No hay productos.";
-                    dgvProductos.DataSource = null;
-                }
+                _productosCache = await _apiClient.GetAsync<List<ProductoModel>>("/api/productos") ?? new List<ProductoModel>();
+                AplicarFiltroProductos();
             }
             catch (Exception ex)
             {
                 lblStatus.Text = "Error: " + ex.Message;
             }
+            finally
+            {
+                _cargandoDatos = false;
+                _evitarSeleccion = false;
+            }
+        }
+
+        private void AplicarFiltroProductos()
+        {
+            var filtroNombre = txtNombre.Text.Trim().ToLowerInvariant();
+            var filtroCategoria = cmbCategoria.SelectedItem?.ToString()?.Trim().ToLowerInvariant();
+
+            var productosFiltrados = _productosCache
+                .Where(p =>
+                    (string.IsNullOrWhiteSpace(filtroNombre) || p.Nombre.ToLowerInvariant().Contains(filtroNombre)) &&
+                    (string.IsNullOrWhiteSpace(filtroCategoria) ||
+                     (!string.IsNullOrWhiteSpace(p.Categoria) && p.Categoria.ToLowerInvariant() == filtroCategoria)))
+                .ToList();
+
+            _evitarSeleccion = true;
+
+            dgvProductos.DataSource = null;
+            dgvProductos.DataSource = productosFiltrados;
+
+            if (dgvProductos.Columns["Id"] != null) dgvProductos.Columns["Id"].Visible = false;
+            if (dgvProductos.Columns["EstaActivo"] != null) dgvProductos.Columns["EstaActivo"].Visible = false;
+            if (dgvProductos.Columns["FechaCreacion"] != null) dgvProductos.Columns["FechaCreacion"].Visible = false;
+
+            if (dgvProductos.Columns["Nombre"] != null)
+            {
+                dgvProductos.Columns["Nombre"].HeaderText = "Nombre";
+                dgvProductos.Columns["Nombre"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+
+            if (dgvProductos.Columns["Descripcion"] != null)
+            {
+                dgvProductos.Columns["Descripcion"].HeaderText = "Descripción";
+                dgvProductos.Columns["Descripcion"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvProductos.Columns["Descripcion"].FillWeight = 55;
+            }
+
+            if (dgvProductos.Columns["Precio"] != null)
+            {
+                dgvProductos.Columns["Precio"].HeaderText = "Precio";
+                dgvProductos.Columns["Precio"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                dgvProductos.Columns["Precio"].DefaultCellStyle.Format = "C2";
+            }
+
+            if (dgvProductos.Columns["Categoria"] != null)
+            {
+                dgvProductos.Columns["Categoria"].HeaderText = "Categoría";
+                dgvProductos.Columns["Categoria"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+
+            dgvProductos.ClearSelection();
+            dgvProductos.CurrentCell = null;
+
+            lblStatus.Text = productosFiltrados.Count == 0
+                ? "No hay productos que coincidan."
+                : $"Productos: {productosFiltrados.Count}";
+
+            _evitarSeleccion = false;
         }
 
         private void dgvProductos_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvProductos.SelectedRows.Count > 0 && dgvProductos.SelectedRows[0].DataBoundItem is ProductoModel p)
+            if (_cargandoDatos || _evitarSeleccion) return;
+            if (dgvProductos.SelectedRows.Count == 0) return;
+            if (dgvProductos.SelectedRows[0].DataBoundItem is not ProductoModel p) return;
+
+            try
             {
+                _cargandoDatos = true;
+
                 _productoSeleccionadoId = p.Id;
                 txtNombre.Text = p.Nombre;
                 txtPrecio.Text = p.Precio.ToString("F2");
@@ -80,15 +137,17 @@ namespace PizzeriaPOS.WinForms.Forms
                 {
                     cmbCategoria.SelectedItem = p.Categoria;
                     if (cmbCategoria.SelectedItem == null)
-                    {
                         cmbCategoria.Text = p.Categoria;
-                    }
                 }
                 else
                 {
                     cmbCategoria.SelectedIndex = -1;
                     cmbCategoria.Text = string.Empty;
                 }
+            }
+            finally
+            {
+                _cargandoDatos = false;
             }
         }
 
@@ -192,6 +251,18 @@ namespace PizzeriaPOS.WinForms.Forms
             Limpiar();
         }
 
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (_cargandoDatos) return;
+            AplicarFiltroProductos();
+        }
+
+        private void dgvProductos_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+            e.Cancel = true;
+        }
+
         private void Limpiar()
         {
             _productoSeleccionadoId = null;
@@ -200,7 +271,24 @@ namespace PizzeriaPOS.WinForms.Forms
             txtDescripcion.Clear();
             cmbCategoria.SelectedIndex = -1;
             cmbCategoria.Text = string.Empty;
+
+            _evitarSeleccion = true;
             dgvProductos.ClearSelection();
+            dgvProductos.CurrentCell = null;
+            _evitarSeleccion = false;
+
+            AplicarFiltroProductos();
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_cargandoDatos) return;
+            AplicarFiltroProductos();
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

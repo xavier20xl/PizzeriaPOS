@@ -66,48 +66,50 @@
             groupBox1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             groupBox1.Location = new Point(10, 10);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(627, 150);
+            groupBox1.Size = new Size(600, 150);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Agregar/Editar Producto";
             // 
             // lblNombre
             // 
-            lblNombre.Location = new Point(23, 30);
+            lblNombre.Location = new Point(19, 29);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(70, 25);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre:";
             lblNombre.TextAlign = ContentAlignment.MiddleRight;
+            lblNombre.Click += lblNombre_Click;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(99, 30);
+            txtNombre.Location = new Point(90, 30);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(200, 25);
             txtNombre.TabIndex = 1;
+            txtNombre.TextChanged += txtNombre_TextChanged;
             // 
             // lblPrecio
             // 
-            lblPrecio.Location = new Point(309, 30);
+            lblPrecio.Location = new Point(292, 29);
             lblPrecio.Name = "lblPrecio";
-            lblPrecio.Size = new Size(57, 25);
+            lblPrecio.Size = new Size(61, 25);
             lblPrecio.TabIndex = 2;
             lblPrecio.Text = "Precio:";
             lblPrecio.TextAlign = ContentAlignment.MiddleRight;
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(372, 30);
+            txtPrecio.Location = new Point(355, 30);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(100, 25);
             txtPrecio.TabIndex = 3;
             // 
             // lblCategoria
             // 
-            lblCategoria.Location = new Point(8, 65);
+            lblCategoria.Location = new Point(7, 64);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(85, 25);
+            lblCategoria.Size = new Size(82, 25);
             lblCategoria.TabIndex = 4;
             lblCategoria.Text = "Categoría:";
             lblCategoria.TextAlign = ContentAlignment.MiddleRight;
@@ -116,14 +118,15 @@
             // 
             cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(99, 65);
+            cmbCategoria.Location = new Point(90, 65);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(200, 25);
             cmbCategoria.TabIndex = 5;
+            cmbCategoria.SelectedIndexChanged += cmbCategoria_SelectedIndexChanged;
             // 
             // lblDescripcion
             // 
-            lblDescripcion.Location = new Point(316, 65);
+            lblDescripcion.Location = new Point(303, 64);
             lblDescripcion.Name = "lblDescripcion";
             lblDescripcion.Size = new Size(50, 25);
             lblDescripcion.TabIndex = 6;
@@ -132,9 +135,9 @@
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(372, 65);
+            txtDescripcion.Location = new Point(355, 65);
             txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(249, 25);
+            txtDescripcion.Size = new Size(230, 25);
             txtDescripcion.TabIndex = 7;
             // 
             // btnAgregar
@@ -198,8 +201,9 @@
             dgvProductos.Name = "dgvProductos";
             dgvProductos.ReadOnly = true;
             dgvProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProductos.Size = new Size(627, 350);
+            dgvProductos.Size = new Size(600, 350);
             dgvProductos.TabIndex = 1;
+            dgvProductos.DataError += dgvProductos_DataError;
             dgvProductos.SelectionChanged += dgvProductos_SelectionChanged;
             // 
             // lblStatus
@@ -218,7 +222,7 @@
             Controls.Add(dgvProductos);
             Controls.Add(lblStatus);
             Name = "ProductosControl";
-            Size = new Size(650, 570);
+            Size = new Size(630, 570);
             Load += ProductosControl_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

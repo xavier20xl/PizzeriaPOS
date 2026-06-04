@@ -96,7 +96,7 @@
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(360, 50);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "Pizzería Lopez";
+            lblTitle.Text = "Pizzería Albatros";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblSubtitle
@@ -125,7 +125,7 @@
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Iniciar Sesión - Pizzería Lopez";
+            Text = "Iniciar Sesión - Pizzería Albatros";
             ResumeLayout(false);
             PerformLayout();
         }

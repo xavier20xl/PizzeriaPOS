@@ -45,7 +45,7 @@
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(500, 40);
             lblTitulo.TabIndex = 0;
-            lblTitulo.Text = "Pizzería Lopez - Sistema POS";
+            lblTitulo.Text = "Pizzería Albatros - Sistema POS";
             // 
             // btnCerrarSesion
             // 

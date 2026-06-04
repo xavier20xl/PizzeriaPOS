@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PizzeriaPOS.WinForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89ae15289326f70c6a0edcbd17c657ab78b30208")]
 [assembly: System.Reflection.AssemblyProductAttribute("PizzeriaPOS.WinForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PizzeriaPOS.WinForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

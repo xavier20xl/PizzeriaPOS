@@ -19,3 +19,4 @@ C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.WinForms\obj\Debug\net8.0-windows\Pizzeri
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.WinForms\obj\Debug\net8.0-windows\PizzeriaPOS.WinForms.Forms.ClientesControl.resources
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.WinForms\obj\Debug\net8.0-windows\PizzeriaPOS.WinForms.Forms.PedidosControl.resources
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.WinForms\obj\Debug\net8.0-windows\PizzeriaPOS.WinForms.Forms.ProductosControl.resources
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.WinForms\obj\Debug\net8.0-windows\PizzeriaPOS.WinForms.sourcelink.json

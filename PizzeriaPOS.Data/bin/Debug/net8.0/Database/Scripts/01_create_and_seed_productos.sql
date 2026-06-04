@@ -41,8 +41,8 @@ BEGIN
     INSERT INTO [dbo].[Productos] ([Nombre], [Descripcion], [Precio], [Categoria])
     VALUES 
         ('Pizza Pepperoni', 'Pizza mediana con pepperoni y queso mozzarella.', 249.00, 'Pizza'),
-        ('Pizza Hawaiana', 'Pizza mediana con jamón, piña y queso mozzarella.', 239.00, 'Pizza'),
-        ('Refresco 2L', 'Bebida gaseosa de dos litros.', 55.00, 'Bebida');
+        ('Pizza Hawaiana', 'Pizza mediana con jamon, pina y queso mozzarella.', 239.00, 'Pizza'),
+        ('Refresco 2L Coca-Cola', 'Refresco Coca-Cola de dos litros.', 65.00, 'Bebida');
     PRINT 'Datos iniciales insertados.';
 END
 ELSE
