@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\PizzeriaPOS\\PizzeriaPOS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|c:\\pizzeriapos\\pizzeriapos\\pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|solutionrelative:pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|c:\\pizzeriapos\\pizzeriapos\\pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|solutionrelative:pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|c:\\pizzeriapos\\pizzeriapos\\pizzeriapos.winforms\\controls\\pedidoscontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|solutionrelative:pizzeriapos.winforms\\controls\\pedidoscontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|c:\\pizzeriapos\\pizzeriapos\\pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|solutionrelative:pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PedidosControl.Designer.cs",
-              "DocumentMoniker": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.Designer.cs",
-              "RelativeDocumentMoniker": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.Designer.cs",
-              "ToolTip": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.Designer.cs",
-              "RelativeToolTip": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.Designer.cs",
-              "ViewState": "AgIAAD8BAAAAAAAAAAAUwF4BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T06:50:45.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PedidosControl.cs",
               "DocumentMoniker": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
               "RelativeDocumentMoniker": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
               "ToolTip": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
               "RelativeToolTip": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
-              "ViewState": "AgIAADUBAAAAAAAAAAAUwFMBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAA3wCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T06:50:22.338Z",
+              "WhenOpened": "2026-06-04T07:01:15.68Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PedidosControl.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
               "RelativeDocumentMoniker": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
               "ToolTip": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs [Dise\u00F1o]",
               "RelativeToolTip": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T06:37:37.095Z",
+              "WhenOpened": "2026-06-04T06:59:04.616Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

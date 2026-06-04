@@ -40,6 +40,8 @@ namespace PizzeriaPOS.WinForms.Forms
 
                 if (pedidos != null && pedidos.Count > 0)
                 {
+                    pedidos = pedidos.OrderByDescending(p => p.FechaPedido).ToList();
+
                     dgvPedidos.DataSource = null;
                     dgvPedidos.DataSource = pedidos;
 
@@ -325,8 +327,8 @@ namespace PizzeriaPOS.WinForms.Forms
             try
             {
                 await _apiClient.PutAsync(
-                    $"/api/pedidos/{_pedidoSeleccionadoId}/estado",
-                    new { Estado = nuevoEstado }
+                    $"/api/pedidos/{_pedidoSeleccionadoId}",
+                    new { Estado = nuevoEstado, Notas = (string?)null, DireccionId = (int?)null }
                 );
                 lblStatus.Text = $"Estado actualizado a: {nuevoEstado}";
                 await CargarPedidosAsync();
