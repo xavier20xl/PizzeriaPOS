@@ -1,0 +1,908 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "PizzeriaPOS API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/auth/register": {
+      "post": {
+        "tags": [
+          "Autenticación"
+        ],
+        "operationId": "Register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Autenticación"
+        ],
+        "operationId": "Login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/clientes": {
+      "get": {
+        "tags": [
+          "Clientes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Clientes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearClienteRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/clientes/{id}": {
+      "get": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarClienteRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/clientes/{clienteId}/direcciones": {
+      "get": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "name": "clienteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "name": "clienteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearDireccionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/clientes/{clienteId}/direcciones/{direccionId}": {
+      "put": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "name": "clienteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "direccionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarDireccionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Clientes"
+        ],
+        "parameters": [
+          {
+            "name": "clienteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "direccionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "tags": [
+          "Health"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pedidos": {
+      "get": {
+        "tags": [
+          "Pedidos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Pedidos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPedidoRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pedidos/{id}": {
+      "get": {
+        "tags": [
+          "Pedidos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Pedidos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarPedidoRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Pedidos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pedidos/{id}/detalles": {
+      "post": {
+        "tags": [
+          "Pedidos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgregarDetalleRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pedidos/{pedidoId}/detalles/{detalleId}": {
+      "delete": {
+        "tags": [
+          "Pedidos"
+        ],
+        "parameters": [
+          {
+            "name": "pedidoId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "detalleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/productos/categorias": {
+      "get": {
+        "tags": [
+          "Productos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/productos": {
+      "get": {
+        "tags": [
+          "Productos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Productos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/productos/{id}": {
+      "get": {
+        "tags": [
+          "Productos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Productos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductoDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Productos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActualizarClienteRequest": {
+        "required": [
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "telefono": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 200,
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActualizarDireccionRequest": {
+        "required": [
+          "calle"
+        ],
+        "type": "object",
+        "properties": {
+          "calle": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "numero": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "colonia": {
+            "maxLength": 200,
+            "type": "string",
+            "nullable": true
+          },
+          "ciudad": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPostal": {
+            "maxLength": 10,
+            "type": "string",
+            "nullable": true
+          },
+          "referencia": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          },
+          "esPrincipal": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActualizarPedidoRequest": {
+        "type": "object",
+        "properties": {
+          "estado": {
+            "maxLength": 50,
+            "type": "string",
+            "nullable": true
+          },
+          "notas": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          },
+          "direccionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgregarDetalleRequest": {
+        "required": [
+          "cantidad",
+          "productoId"
+        ],
+        "type": "object",
+        "properties": {
+          "productoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "notas": {
+            "maxLength": 300,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearClienteRequest": {
+        "required": [
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "telefono": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 200,
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearDireccionRequest": {
+        "required": [
+          "calle"
+        ],
+        "type": "object",
+        "properties": {
+          "calle": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "numero": {
+            "maxLength": 20,
+            "type": "string",
+            "nullable": true
+          },
+          "colonia": {
+            "maxLength": 200,
+            "type": "string",
+            "nullable": true
+          },
+          "ciudad": {
+            "maxLength": 100,
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPostal": {
+            "maxLength": 10,
+            "type": "string",
+            "nullable": true
+          },
+          "referencia": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          },
+          "esPrincipal": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearPedidoDetalleRequest": {
+        "required": [
+          "cantidad",
+          "productoId"
+        ],
+        "type": "object",
+        "properties": {
+          "productoId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidad": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "notas": {
+            "maxLength": 300,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearPedidoRequest": {
+        "required": [
+          "clienteId",
+          "detalles"
+        ],
+        "type": "object",
+        "properties": {
+          "clienteId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "direccionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "notas": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          },
+          "detalles": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CrearPedidoDetalleRequest"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "required": [
+          "nombreUsuario",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "nombreUsuario": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductoDto": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "precio": {
+            "type": "number",
+            "format": "double"
+          },
+          "categoria": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterRequest": {
+        "required": [
+          "nombreUsuario",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "nombreUsuario": {
+            "maxLength": 100,
+            "minLength": 3,
+            "type": "string"
+          },
+          "password": {
+            "minLength": 6,
+            "type": "string"
+          },
+          "nombreCompleto": {
+            "maxLength": 200,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

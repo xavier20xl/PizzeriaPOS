@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "PizzeriaPOS.API\\PizzeriaPOS.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

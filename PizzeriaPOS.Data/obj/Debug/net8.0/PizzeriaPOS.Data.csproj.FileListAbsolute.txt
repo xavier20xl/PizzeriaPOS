@@ -1,0 +1,16 @@
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\PizzeriaPOS.Data.deps.json
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\PizzeriaPOS.Data.dll
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\PizzeriaPOS.Data.pdb
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.AssemblyInfoInputs.cache
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.AssemblyInfo.cs
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.csproj.CoreCompileInputs.cache
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.dll
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\refint\PizzeriaPOS.Data.dll
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.pdb
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\ref\PizzeriaPOS.Data.dll
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.csproj.AssemblyReference.cache
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\01_create_and_seed_productos.sql
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\02_create_tables_complete.sql
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\03_create_usuarios_table.sql
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\04_seed_usuario_admin.sql

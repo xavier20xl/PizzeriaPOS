@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PizzeriaPOS.API/PizzeriaPOS.API.csproj" />
+  <Project Path="PizzeriaPOS.Data/PizzeriaPOS.Data.csproj" />
+  <Project Path="PizzeriaPOS.Tests/PizzeriaPOS.Tests.csproj" />
+  <Project Path="PizzeriaPOS.WinForms/PizzeriaPOS.WinForms.csproj" />
+</Solution>
