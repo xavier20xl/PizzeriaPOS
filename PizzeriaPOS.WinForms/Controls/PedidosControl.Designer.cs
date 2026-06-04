@@ -240,7 +240,7 @@
             lblTotal.Name = "lblTotal";
             lblTotal.Size = new Size(430, 25);
             lblTotal.TabIndex = 1;
-            lblTotal.Text = "Total: $0.00";
+            lblTotal.Text = "Total: L0.00";
             lblTotal.TextAlign = ContentAlignment.MiddleRight;
             // 
             // groupEstado

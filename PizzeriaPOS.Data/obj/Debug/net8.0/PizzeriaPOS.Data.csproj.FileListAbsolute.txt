@@ -13,4 +13,5 @@ C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.cs
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\01_create_and_seed_productos.sql
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\02_create_tables_complete.sql
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\03_create_usuarios_table.sql
-C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\04_seed_usuario_admin.sql
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\bin\Debug\net8.0\Database\Scripts\04_seed_50_productos_clientes_pedidos.sql
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.Data\obj\Debug\net8.0\PizzeriaPOS.Data.sourcelink.json

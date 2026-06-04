@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\PizzeriaPOS\\PizzeriaPOS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|c:\\pizzeriapos\\pizzeriapos\\pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|solutionrelative:pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|c:\\pizzeriapos\\pizzeriapos\\pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|solutionrelative:pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -23,19 +19,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PedidosControl.cs",
-              "DocumentMoniker": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
-              "RelativeDocumentMoniker": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
-              "ToolTip": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
-              "RelativeToolTip": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA3wCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T07:01:15.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "PedidosControl.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
               "RelativeDocumentMoniker": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",

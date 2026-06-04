@@ -86,5 +86,6 @@ C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.API\bin\Debug\net8.0\Database\Scripts\02_
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.API\bin\Debug\net8.0\Database\Scripts\03_create_usuarios_table.sql
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.API\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.API\bin\Debug\net8.0\Database\Scripts\04_seed_usuario_admin.sql
 C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.API\bin\Debug\net8.0\Database\Scripts\04_seed_50_productos_clientes_pedidos.sql
+C:\PizzeriaPOS\PizzeriaPOS\PizzeriaPOS.API\obj\Debug\net8.0\PizzeriaPOS.API.sourcelink.json

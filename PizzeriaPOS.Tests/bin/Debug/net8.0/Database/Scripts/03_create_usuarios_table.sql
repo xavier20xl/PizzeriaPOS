@@ -1,12 +1,11 @@
 -- ============================================
--- Script: Tabla de Usuarios
+-- Script 03: Crear tabla Usuarios
 -- Proyecto: PizzeriaPOS
 -- ============================================
 
 USE PizzeriaPOS;
 GO
 
--- Crear tabla Usuarios
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Usuarios]') AND type in (N'U'))
 BEGIN
     CREATE TABLE [dbo].[Usuarios](
@@ -19,7 +18,6 @@ BEGIN
         CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED ([Id] ASC),
         CONSTRAINT [UQ_Usuarios_NombreUsuario] UNIQUE ([NombreUsuario])
     );
-    
     PRINT 'Tabla Usuarios creada exitosamente.';
 END
 ELSE
