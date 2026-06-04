@@ -122,6 +122,10 @@ El proyecto de pruebas valida el comportamiento de los repositorios de `Producto
 
 ---
 
+> *"Funciona en mi máquina"* 🤷
+
+![works on my machine](https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif)
+
 ## Autor
 
 Proyecto de laboratorio desarrollado para evaluación técnica — Albatros.
