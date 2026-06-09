@@ -13,6 +13,7 @@ namespace PizzeriaPOS.WinForms.Forms
 
         public PedidosControl(ApiClient apiClient)
         {
+            // Estilos horneados en PedidosControl.Designer.cs — sin Theme.
             InitializeComponent();
             _apiClient = apiClient;
         }

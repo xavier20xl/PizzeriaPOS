@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\PizzeriaPOS\\PizzeriaPOS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|c:\\pizzeriapos\\pizzeriapos\\pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|solutionrelative:pizzeriapos.winforms\\controls\\pedidoscontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|c:\\pizzeriapos\\pizzeriapos\\pizzeriapos.winforms\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7415D733-2787-7A96-BDC3-7AECAD19DE96}|PizzeriaPOS.WinForms\\PizzeriaPOS.WinForms.csproj|solutionrelative:pizzeriapos.winforms\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PedidosControl.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
-              "RelativeDocumentMoniker": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs",
-              "ToolTip": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs [Dise\u00F1o]",
-              "RelativeToolTip": "PizzeriaPOS.WinForms\\Controls\\PedidosControl.cs [Dise\u00F1o]",
+              "Title": "LoginForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "PizzeriaPOS.WinForms\\Forms\\LoginForm.cs",
+              "ToolTip": "C:\\PizzeriaPOS\\PizzeriaPOS\\PizzeriaPOS.WinForms\\Forms\\LoginForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PizzeriaPOS.WinForms\\Forms\\LoginForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T06:59:04.616Z",
+              "WhenOpened": "2026-06-09T02:07:14.35Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]
